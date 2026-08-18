@@ -10,7 +10,7 @@ export default function Privacy() {
         <h2 className="font-bold text-xl text-ink">مشاركة البيانات</h2>
         <p>لا نبيع بياناتك ولا نشاركها مع أي طرف ثالث لأغراض تسويقية خارجية. قد تتم مشاركة بيانات التواصل مع فريق المبيعات المعتمد المختص بالمشروع لإتمام خدمتك فقط.</p>
         <h2 className="font-bold text-xl text-ink">حقوقك</h2>
-        <p>يحق لك طلب حذف بياناتك أو إيقاف التواصل في أي وقت عبر <span dir="ltr">01001050018</span>.</p>
+        <p>يحق لك طلب حذف بياناتك أو إيقاف التواصل في أي وقت عبر <span dir="ltr">01029944403</span>.</p>
         <p><a href="/" className="text-emerald underline">العودة للصفحة الرئيسية</a></p>
       </div>
     </main>
