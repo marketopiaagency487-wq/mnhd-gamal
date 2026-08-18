@@ -13,7 +13,7 @@ const waLink = (msg: string) =>
 const WA_DEFAULT = waLink(
   "مرحباً، أريد الاستفسار عن أسعار مشاريع مدينة مصر (سراي / تاج سيتي / ذا باترفلاي)"
 );
-const WEB3FORMS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY"; // TODO
+const WEB3FORMS_KEY = "https://madinitmasregy.org"; // TODO
 
 const CONV_FORM = "AW-XXXXXXXXXX/FORM_LABEL"; // TODO
 const CONV_WHATSAPP = "AW-XXXXXXXXXX/WA_LABEL"; // TODO
