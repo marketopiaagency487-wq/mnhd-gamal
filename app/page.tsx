@@ -15,9 +15,9 @@ const WA_DEFAULT = waLink(
 );
 const WEB3FORMS_KEY = "https://madinitmasregy.org"; // TODO
 
-const CONV_FORM = "AW-XXXXXXXXXX/FORM_LABEL"; // TODO
-const CONV_WHATSAPP = "AW-XXXXXXXXXX/WA_LABEL"; // TODO
-const CONV_CALL = "AW-XXXXXXXXXX/CALL_LABEL"; // TODO
+const CONV_FORM = "AW-18578527597/TQ5QCPjdhLsdEO2q95pF"; // TODO
+const CONV_WHATSAPP = "AW-18578527597/lqDvCL3XibsdEO2q95pF"; // TODO
+const CONV_CALL = "AW-18578527597/gRahCMDXibsdEO2q95pF"; // TODO
 
 declare global {
   interface Window {
