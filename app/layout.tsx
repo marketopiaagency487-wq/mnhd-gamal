@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 
-// ====== GOOGLE ADS — PLACEHOLDER (عدّل قبل الرفع) ======
-const AW_ID = "AW-XXXXXXXXXX"; // TODO
+// ====== GOOGLE ADS + GTM ======
+const AW_ID = "AW-18578527597";
+const GTM_ID = "GTM-WNJLMPCF";
 
 export const metadata: Metadata = {
   title:
@@ -43,10 +44,36 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,600;1,600&display=swap"
           rel="stylesheet"
         />
+
+        {/* Google Tag Manager */}
+        <Script id="gtm-init" strategy="afterInteractive">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','${GTM_ID}');
+          `}
+        </Script>
       </head>
       <body className="font-body bg-ivory text-ink antialiased">
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+
         {children}
-        <Script src={`https://www.googletagmanager.com/gtag/js?id=${AW_ID}`} strategy="afterInteractive" />
+
+        {/* Google Ads — gtag.js (مسؤول عن تحويلات الفورم والواتساب والاتصال) */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${AW_ID}`}
+          strategy="afterInteractive"
+        />
         <Script id="gtag-init" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
